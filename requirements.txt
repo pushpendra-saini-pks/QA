@@ -1,0 +1,10 @@
+langchain 
+langchain_community 
+python-dotenv
+pinecone-client
+pypdf
+langchain_pinecone
+langchain_google_genai
+streamlit 
+ipykernel
+groq
