@@ -15,12 +15,10 @@ RUN apt-get update && apt-get install -y \
 
 RUN pip install -r requirements.txt
 
-# Set environment variable 
-ENV os.environment["GOOGLE_API_KEY"] = os.getenv("GOOGLE_API_KEY")
-
-ENV os.environment["PINECONE_API_KEY"] = os.getenv("PINECONE_API_KEY")
-
-ENV os.environment["GROQ_API_KEY"] = os.getenv("GROQ_API_KEY")
+# Set environment variables
+ENV GOOGLE_API_KEY=your-google-api-key
+ENV PINECONE_API_KEY=your-pinecone-api-key
+ENV GROQ_API_KEY=your-groq-api-key
 
 EXPOSE 8501
 
