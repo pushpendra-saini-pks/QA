@@ -27,7 +27,7 @@ os.makedirs(file_folder, exist_ok=True)
 os.makedirs(chunk_folder, exist_ok=True)
 
 
-st.set_page_config(layout="wide")  # full page 
+st.set_page_config(page_title = "Q&A",layout="wide")  # full page 
 
 
 # Full-width container for title, file uploader, and text input

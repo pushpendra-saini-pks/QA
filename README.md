@@ -1,7 +1,3 @@
-Here is the updated `README.md` file with the Docker setup and the addition of the LLM model "llama3-8b-8192" to the tech stack:
-
----
-
 # Q&A Application using RAG
 
 ## Overview 🎙️
@@ -66,7 +62,7 @@ This project provides a solution for processing PDF documents and allows for que
 ### Docker Setup 🐋
 1. **Build Docker Image**:
    ```bash
-   docker build -t qna-rag-app .
+   docker build -t qa-app .
    ```
 
 2. **Run Docker Container**:
@@ -77,35 +73,6 @@ This project provides a solution for processing PDF documents and allows for que
 3. **Access the app**:
    Navigate to `http://localhost:8501` in your browser.
 
-## Dockerfile 🐳
-```Dockerfile
-# app/Dockerfile
-
-FROM python:3.12
-
-COPY . /app
-WORKDIR /app
-
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    curl \
-    software-properties-common \
-    git \
-    && rm -rf /var/lib/apt/lists/*
-
-RUN pip install -r requirements.txt
-
-# Set environment variables
-ENV GOOGLE_API_KEY=your-google-api-key
-ENV PINECONE_API_KEY=your-pinecone-api-key
-ENV GROQ_API_KEY=your-groq-api-key
-
-EXPOSE 8501
-
-HEALTHCHECK CMD curl --fail http://localhost:8501/_stcore/health
-
-ENTRYPOINT ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
-```
 
 ## Tech Stack 🛠️
 - **Groq**: Optimizing the Q&A process.
@@ -113,13 +80,16 @@ ENTRYPOINT ["streamlit", "run", "app.py", "--server.port=8501", "--server.addres
 - **Pinecone**: Vector database for embeddings storage and retrieval.
 - **Streamlit**: Web application framework for the interactive user interface.
 - **Llama3-8b-8192**: Open-source LLM for generating content based on user queries.
-- **Tiktoken**: Used for tokenizing text for embeddings.
+- **GoogleGenerativeAIEmbeddings**: For generating embeddings from text chunks.
 - **LangChain**: For creating embeddings and handling document processing.
 
 ## Troubleshooting 🔍
 If you encounter any issues:
 1. Make sure your virtual environment is activated.
-2. Verify Python version compatibility with `python --version`.
+2. Verify Python version compatibility with 
+```bash 
+python --version.
+```
 3. Ensure all API keys (Google, Pinecone, Groq) are set properly.
 
 ## License 📄
@@ -127,7 +97,16 @@ The source code for the project is licensed under the MIT license, which you can
 
 ## Contributing 🤝
 1. Fork the project.
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`).
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`).
-4. Push to the branch (`git push origin feature/AmazingFeature`).
+2. Create your feature branch 
+```bash 
+git checkout -b feature/AmazingFeature
+```
+3. Commit your changes 
+```bash
+git commit -m 'Add some AmazingFeature'
+ ```
+4. Push to the branch 
+```bash 
+git push origin feature/AmazingFeature
+```
 5. Open a Pull Request.
