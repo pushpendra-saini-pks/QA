@@ -62,7 +62,7 @@ This project provides a solution for processing PDF documents and allows for que
 ### Docker Setup 🐋
 1. **Build Docker Image**:
    ```bash
-   docker build -t pushpendra/qa-app .
+   docker build -t pushpendra2000/qa-app .
    ```
 
 2. **Run Docker Container**:
