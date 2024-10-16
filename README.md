@@ -67,7 +67,7 @@ This project provides a solution for processing PDF documents and allows for que
 
 2. **Run Docker Container**:
    ```bash
-   docker run -p 8501:8501 --env GOOGLE_API_KEY=your-google-api-key --env PINECONE_API_KEY=your-pinecone-api-key --env GROQ_API_KEY=your-groq-api-key qna-rag-app
+   docker run -p 8501:8501 --env GOOGLE_API_KEY=your-google-api-key --env PINECONE_API_KEY=your-pinecone-api-key --env GROQ_API_KEY=your-groq-api-key pushpendra2000/qa-app
    ```
 
 3. **Access the app**:
