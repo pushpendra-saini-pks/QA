@@ -5,7 +5,7 @@ def transcript_chat_completion(client, relevant_docs, user_question):
         messages=[
             {
                 "role":"system",
-                "content":'''use this relevant_docs  to answer any user questions,citing specific quotes:
+                "content":'''use this relevant_docs  to answer any user questions, markdown import text and headings:
                 {relevant_docs}
                 '''.format(relevant_docs=relevant_docs)
             },
