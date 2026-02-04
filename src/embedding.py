@@ -3,7 +3,7 @@ from langchain_pinecone.vectorstores import Pinecone
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 # initialize the embeddings model 
 doc_embeddings = GoogleGenerativeAIEmbeddings(
-    model="models/embedding-001"
+    model="models/text-embedding-004"
     
 )
 
