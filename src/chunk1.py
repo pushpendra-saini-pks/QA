@@ -1,5 +1,5 @@
 # chunk.py
-from langchain.document_loaders import PyPDFLoader
+from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.schema import Document # Import the Document schema
 from langchain.docstore.document import Document 
