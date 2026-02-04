@@ -1,6 +1,8 @@
 import os 
 import streamlit as st 
 from dotenv import load_dotenv
+load_dotenv()
+
 from groq import Groq
 from src.chunk1 import chunking
 from src.embedding import store_embeddings
@@ -8,7 +10,7 @@ from src.question_answer import query_vector_database, transcript_chat_completio
 # from langchain.docstore.document import Document
 
 # Load the environment variables
-load_dotenv()
+# load_dotenv()
 API_KEY = os.getenv("GROQ_API_KEY")
 
 # Ensure the api_key is loaded 
