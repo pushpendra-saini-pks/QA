@@ -22,7 +22,7 @@ index_name = "test1"
 
 def store_embeddings(document_chunks):
     embeddings = GoogleGenerativeAIEmbeddings(
-        model="models/text-embedding-004"
+        model="gemini-embedding-001"
     )
 
     docsearch = Pinecone.from_documents(
