@@ -1,4 +1,4 @@
-from langchain_pinecone import PineconeVectorStore
+from langchain_pinecone.vectorstores import PineconeVectorStore
 # from langchain.docstore.document import Document 
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 # initialize the embeddings model 

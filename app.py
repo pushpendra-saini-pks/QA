@@ -5,7 +5,7 @@ from groq import Groq
 from src.chunk1 import chunking
 from src.embedding import store_embeddings
 from src.question_answer import query_vector_database, transcript_chat_completion
-from langchain.docstore.document import Document
+# from langchain.docstore.document import Document
 
 # Load the environment variables
 load_dotenv()
