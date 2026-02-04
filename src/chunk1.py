@@ -2,7 +2,7 @@
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.documents import Document # Import the Document schema
-from langchain.docstore.document import Document 
+# from langchain.docstore.document import Document 
 
 def chunking(filepath):
     # Load the PDF document using LangChain's PyPDFLoader
